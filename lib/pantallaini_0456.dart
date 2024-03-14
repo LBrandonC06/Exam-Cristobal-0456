@@ -7,7 +7,7 @@ class PantallaIni_0456 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Paguina Inicial Cristobal"),
+        title: const Text("Cristobal-0456"),
         backgroundColor: Color(0xff125186),
       ),
       body: Center(

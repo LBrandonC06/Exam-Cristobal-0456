@@ -15,7 +15,7 @@ class Pantalla2_0456State extends State<Pantalla2_0456> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Paguina 2 Cristobal"),
+        title: const Text("Paguina 2 Cristobal-0456"),
         backgroundColor: Color(0xff1d8409),
       ),
       body: SingleChildScrollView(
@@ -46,12 +46,12 @@ class Pantalla2_0456State extends State<Pantalla2_0456> {
                         Text(
                           "Targeta de precentacion",
                           style:
-                              TextStyle(fontSize: 24, color: Colors.grey[800]),
+                              TextStyle(fontSize: 24, color: Color(0xff2f5d19)),
                         ),
                         Container(height: 10),
                         Text(MyStringsSample.card_text,
                             style: TextStyle(
-                                fontSize: 15, color: Colors.grey[700])),
+                                fontSize: 15, color: Color(0xff356e14))),
                         Row(
                           children: <Widget>[
                             const Spacer(),

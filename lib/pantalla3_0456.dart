@@ -1,80 +1,85 @@
 import 'package:flutter/material.dart';
 
-class Pantalla3_0456 extends StatefulWidget {
-  const Pantalla3_0456({Key? key});
+class Pantalla3_0456 extends StatelessWidget {
+  const Pantalla3_0456({Key? key}) : super(key: key);
 
-  @override
-  Pantalla3_0456State createState() => Pantalla3_0456State();
-}
-
-class Pantalla3_0456State extends State<Pantalla3_0456> {
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
-        child: Container(
-      height: 200,
-      width: 200,
-      padding: EdgeInsets.all(32),
-      decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [
-              Color(0xFF846AFF),
-              Color(0xFF755EE8),
-              Colors.purpleAccent,
-              Colors.amber,
-            ],
-          ),
-          borderRadius: BorderRadius.circular(
-              16)), // Adds a gradient background and rounded corners to the container
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Text('Family Card',
-                      style: MyTextSample.headline(context)!.copyWith(
-                          color: Colors.white,
-                          fontFamily: "monospace")), // Adds a title to the card
-                  const Spacer(),
-                  Stack(
-                    children: List.generate(
-                      2,
-                      (index) => Container(
-                        margin: EdgeInsets.only(left: (15 * index).toDouble()),
-                        height: 10,
-                        width: 10,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(1),
-                            color: Colors.white54),
-                      ),
-                    ),
-                  ) // Adds a stack of two circular containers to the right of the title
+        appBar: AppBar(
+          backgroundColor: Color(0xff1e7f15),
+          title: const Text("Paguina 2 Cristobal-0456"),
+        ),
+        body: Container(
+          height: 200,
+          width: double.infinity,
+          padding: const EdgeInsets.all(32),
+          decoration: BoxDecoration(
+              gradient: const LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xff2b00ff),
+                  Color(0xff4930c9),
+                  Colors.purpleAccent,
+                  Colors.amber,
                 ],
               ),
-              Text('4111 7679 8689 9700',
-                  style: MyTextSample.subhead(context)!.copyWith(
-                      color: Colors.white,
-                      fontFamily: "monospace")) // Adds a subtitle to the card
+              borderRadius: radius(
+                  16)), // Adds a gradient background and rounded corners to the container
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text('Family Card',
+                          style: MyTextSample.headline(context)!.copyWith(
+                              color: Colors.white,
+                              fontFamily:
+                                  "monospace")), // Adds a title to the card
+                      const Spacer(),
+                      Stack(
+                        children: List.generate(
+                          2,
+                          (index) => Container(
+                            margin:
+                                EdgeInsets.only(left: (15 * index).toDouble()),
+                            height: 30,
+                            width: 30,
+                            decoration: BoxDecoration(
+                                borderRadius: radius(100),
+                                color: Colors.white54),
+                          ),
+                        ),
+                      ) // Adds a stack of two circular containers to the right of the title
+                    ],
+                  ),
+                  Text('4111 7679 8689 9700',
+                      style: MyTextSample.subhead(context)!.copyWith(
+                          color: Colors.white,
+                          fontFamily:
+                              "monospace")) // Adds a subtitle to the card
+                ],
+              ),
+              const Text('\$3,000',
+                  style: TextStyle(
+                      fontSize: 24,
+                      color: Colors
+                          .white)) // Adds a price to the bottom of the card
             ],
           ),
-          const Text('\$3,000',
-              style: TextStyle(
-                  fontSize: 24,
-                  color:
-                      Colors.white)) // Adds a price to the bottom of the card
-        ],
-      ),
-    ));
+        ));
   }
 }
 
-////////////////////////////////////////////////////////////////////////////////
+class ImgSample {
+  static String get(String name) {
+    return 'assets/images/$name';
+  }
+}
 
 class MyColorsSample {
   static const Color primary = Color(0xFF12376F);
@@ -158,12 +163,12 @@ class MyTextSample {
   }
 }
 
-class MyStringsSample {
-  static const String lorem_ipsum =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin"
-      "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam efficitur ipsum in placerat molestie.  Fusce quis mauris a enim sollicitudin";
-  static const String middle_lorem_ipsum =
-      "Flutter is an open-source UI software development kit created by Google. It is used to develop cross-platform applications for Android, iOS, Linux, macOS, Windows, Google Fuchsia, and the web from a single codebase.";
-  static const String card_text =
-      "Cards are surfaces that display content and actions on a single topic.";
+/// returns Radius
+BorderRadius radius([double? radius]) {
+  return BorderRadius.all(radiusCircular(radius ?? 16));
+}
+
+/// returns Radius
+Radius radiusCircular([double? radius]) {
+  return Radius.circular(radius ?? 16);
 }

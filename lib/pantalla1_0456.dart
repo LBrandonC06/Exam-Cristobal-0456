@@ -12,7 +12,7 @@ class Pantalla1_0456State extends State<Pantalla1_0456> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Paguina 1 Cristobal"),
+          title: const Text("Paguina 1 Cristobal-0456"),
           backgroundColor: Color(0xff1d8409),
         ),
         body: Center(
